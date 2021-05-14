@@ -3642,12 +3642,21 @@ input[type="button"]:disabled,
 		margin: auto;
 	}
 }
+@media only screen and (max-width: 450px) {
+	.slideshow-container {
+		max-width: 1000px;
+		position: relative;
+		height: 450px;
+		margin: auto;
+	}
+}
+
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 400px) {
 	.slideshow-container {
 		max-width: 1000px;
 		position: relative;
-		height: 500px;
+		height: 450px;
 		margin: auto;
 	}
 }
