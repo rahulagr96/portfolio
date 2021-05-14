@@ -3522,7 +3522,7 @@ input[type="button"]:disabled,
 	border: 2px solid #0563bb;
 }
 
-/* 
+/*
   .typing-demo {
 	width: 35ch;
 	animation: typing 2s steps(22), blink .5s step-end infinite alternate;
@@ -3533,13 +3533,13 @@ input[type="button"]:disabled,
 	font-size: 2em;
 	font-weight: bold;
   }
-  
+
   @keyframes typing {
 	from {
 	  width: 0
 	}
   }
-	  
+
   @keyframes blink {
 	50% {
 	  border-color: transparent
@@ -3634,6 +3634,7 @@ input[type="button"]:disabled,
 	height: 380px;
 	margin: auto;
 }
+
 @media only screen and (max-width: 500px) {
 	.slideshow-container {
 		max-width: 1000px;
@@ -3642,6 +3643,7 @@ input[type="button"]:disabled,
 		margin: auto;
 	}
 }
+
 @media only screen and (max-width: 450px) {
 	.slideshow-container {
 		max-width: 1000px;
@@ -3708,4 +3710,49 @@ input[type="button"]:disabled,
 
 .mySlides {
 	display: none;
+}
+
+/*------New social links*/
+.new-social-links {
+	display: flex;
+	/* margin: 0;
+	padding: 0; */
+	box-sizing: border-box;
+
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.new-social-btn {
+	cursor: pointer;
+	height: 50px;
+	width: 50px;
+	font-family: 'Titillium Web', sans-serif;
+	color: #333;
+	border-radius: 10px;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+	background: white;
+	margin: 5px;
+	transition: 1s;
+}
+
+.new-social-btn span {
+	width: 0px;
+	overflow: hidden;
+	transition: 1s;
+	text-align: center;
+}
+
+.new-social-btn:hover {
+	width: 150px;
+	border-radius: 5px;
+}
+
+.new-social-btn:hover span {
+	padding: 2px;
+	width: max-content;
 }
