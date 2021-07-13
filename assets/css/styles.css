@@ -864,6 +864,8 @@ img {
 
 .testimonial_description {
     margin-bottom: var(--mb-2-5);
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .testimonial_icon-star {
