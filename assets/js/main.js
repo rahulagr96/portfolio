@@ -46,6 +46,7 @@ function toggleSkills() {
 skillsHeader.forEach((el) => {
     el.addEventListener('click', toggleSkills)
 })
+
 /*==================== QUALIFICATION TABS ====================*/
 const tabs = document.querySelectorAll('[data-target]'),
     tabContents = document.querySelectorAll('[data-content]')
@@ -63,6 +64,7 @@ tabs.forEach(tab => {
         tab.classList.add('qualification_active')
     })
 })
+
 /*==================== SERVICES MODAL ====================*/
 const modalViews = document.querySelectorAll('.services_modal'),
     modalBtns = document.querySelectorAll('.services_button'),
@@ -85,6 +87,7 @@ modalCloses.forEach((modalClose) => {
         })
     })
 })
+
 /*==================== PORTFOLIO SWIPER  ====================*/
 let swiperPortfolio = new Swiper(".portfolio_container", {
     cssMode: true,
@@ -114,9 +117,25 @@ let swiperTestimonial = new Swiper(".testimonial_container", {
     }
 });
 
-
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+const sections = document.querySelectorAll('section[id]')
 
+function scrollActive(){
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50;
+        sectionId = current.getAttribute('id')
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+        }else{
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/
 
