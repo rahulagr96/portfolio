@@ -147,6 +147,10 @@ img {
 
 .section_title {
     font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
+    text-transform: uppercase;
+    letter-spacing: .35rem;
+    text-align: center;
 }
 
 .section_subtitle {
