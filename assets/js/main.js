@@ -103,15 +103,20 @@ let swiperPortfolio = new Swiper(".portfolio_container", {
 
 /*==================== TESTIMONIAL ====================*/
 let swiperTestimonial = new Swiper(".testimonial_container", {
-    grabCursor: true,
-    spaceBetween: 48,
+    // grabCursor: true,
+    // spaceBetween: 48,
+    cssMode: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
         dynamicBullets: true,
     },
     breakpoints:{
-        568:{
+        768:{
             slidesPerView : 2,
         }
     }
